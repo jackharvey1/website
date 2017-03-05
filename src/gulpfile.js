@@ -10,11 +10,15 @@ const nodemon = require('gulp-nodemon');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
+const scsslint = require('gulp-scss-lint');
 
 gulp.task('build', ['scss', 'js']);
 
 gulp.task('scss', function () {
     gulp.src('./public/sass/**/*.scss')
+        .pipe(scsslint({
+            'config': 'scsslint.yml'
+        }))
         .pipe(autoprefixer())
         .pipe(sass().on('error', sass.logError))
         .pipe(concat('main.css'))
