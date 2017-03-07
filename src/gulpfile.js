@@ -11,6 +11,7 @@ const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const scsslint = require('gulp-scss-lint');
+const purify = require('gulp-purifycss');
 
 gulp.task('build', ['scss', 'js']);
 
@@ -22,6 +23,7 @@ gulp.task('scss', function () {
         .pipe(autoprefixer())
         .pipe(sass().on('error', sass.logError))
         .pipe(concat('main.css'))
+        .pipe(purify(['./public/js/*.js', './public/views/**/*.hbs']))
         .pipe(gulp.dest('./public/css/'))
         .pipe(livereload());
 });
