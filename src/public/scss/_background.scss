@@ -1,0 +1,15 @@
+.Background {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    @include flexAndCenter;
+
+    overflow-y: auto;
+
+    background: linear-gradient(to bottom right, #EFEFEF, #CBCBCB);
+    transition: opacity 1.2s linear;
+}

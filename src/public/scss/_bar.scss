@@ -1,0 +1,21 @@
+.Bar {
+    width: 100%;
+    height: $bottom-bar-height;
+
+    @include wide {
+        width: 100vw;
+    }
+}
+
+.Bar-bottom {
+    position: relative;
+    bottom: 0;
+
+    @include wide {
+        position: absolute;
+    }
+}
+
+.Bar-down {
+    @include flexAndCenter;
+}

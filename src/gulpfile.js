@@ -16,7 +16,7 @@ const purify = require('gulp-purifycss');
 gulp.task('build', ['scss', 'js']);
 
 gulp.task('scss', function () {
-    gulp.src('./public/sass/**/*.scss')
+    gulp.src('./public/scss/master.scss')
         .pipe(scsslint({
             'config': 'scsslint.yml'
         }))
@@ -36,9 +36,9 @@ gulp.task('js', function () {
         .pipe(buffer())
         .pipe(sourcemaps.init())
         .pipe(uglify())
-            .on('error', function (err) {
-                console.error(err.message);
-            })
+        .on('error', function (err) {
+            console.error(err.message);
+        })
         .pipe(sourcemaps.write('../maps'))
         .pipe(gulp.dest('./public/js/'))
         .pipe(livereload());
@@ -53,7 +53,7 @@ gulp.task('server', ['build'], function () {
 });
 
 gulp.task('watch', ['build'], function() {
-    gulp.watch('./public/sass/*.scss', ['scss']);
+    gulp.watch('./public/scss/*.scss', ['scss']);
     gulp.watch('./public/js/*.js', ['js']);
     gulp.watch('./public/views/**/*.hbs', ['build']);
 });

@@ -1,0 +1,64 @@
+.Island {
+    position: relative;
+    width: 300px;
+    margin: auto;
+
+    @include small {
+        min-height: 568px;
+    }
+
+    @include wide {
+        @include flexAndCenter;
+        height: 100%;
+        width: 750px;
+    }
+}
+
+.Island-inner {
+    position: relative;
+    display: block;
+    margin: auto auto $bottom-bar-height;
+
+    @include flexAndCenter;
+}
+
+.Island-aux {
+    @include flexAndCenter;
+    margin: 0 auto;
+
+    @include small {
+        margin-top: 1rem;
+    }
+
+    @include wide {
+        position: absolute;
+        display: flex;
+        top: 0;
+        bottom: 100px;
+        left: 610px;
+    }
+}
+
+.Island-text {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+
+    @include wide {
+        margin-bottom: 0;
+        text-align: left;
+        width: 30rem;
+    }
+}
+
+.Island-img {
+    margin: 0.5rem auto;
+    display: block;
+    width: $img-width;
+
+    @include wide {
+        float: left;
+        display: inline-block;
+        margin: 0 1.5rem 0 0;
+    }
+}

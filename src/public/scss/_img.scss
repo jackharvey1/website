@@ -1,0 +1,4 @@
+.Img--round {
+    border: 5px solid #FFF;
+    border-radius: calc(#{$img-width} / 2);
+}
