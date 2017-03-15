@@ -1,7 +1,5 @@
 .Background {
     position: relative;
-    display: flex;
-    justify-content: center;
 
     width: 100%;
     height: 100%;
@@ -10,6 +8,10 @@
 
     overflow-y: auto;
 
-    background: linear-gradient(to bottom right, #EFEFEF, #CBCBCB);
+    background-color: #DDD;
     transition: opacity 1.2s linear;
+}
+
+.Background-secondary {
+    height: calc(100% - #{$bottom-bar-height})
 }

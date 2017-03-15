@@ -17,25 +17,25 @@
 .Island-inner {
     position: relative;
     display: block;
-    margin: auto auto $bottom-bar-height;
 
-    @include flexAndCenter;
+    @include wide {
+        @include flexAndCenter;
+    }
 }
 
 .Island-aux {
     @include flexAndCenter;
-    margin: 0 auto;
 
     @include small {
-        margin-top: 1rem;
+        margin: 1rem auto 0;
+        width: 115px;
+        display: block;
     }
 
     @include wide {
         position: absolute;
-        display: flex;
-        top: 0;
-        bottom: 100px;
-        left: 610px;
+        top: 30px;
+        right: 0;
     }
 }
 
