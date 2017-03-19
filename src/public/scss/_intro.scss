@@ -1,11 +1,7 @@
-.Island {
+.Intro {
     position: relative;
     width: 300px;
     margin: auto;
-
-    @include small {
-        min-height: 568px;
-    }
 
     @include wide {
         @include flexAndCenter;
@@ -14,7 +10,7 @@
     }
 }
 
-.Island-inner {
+.Intro-inner {
     position: relative;
     display: block;
 
@@ -23,12 +19,12 @@
     }
 }
 
-.Island-aux {
+.Intro-aux {
     @include flexAndCenter;
 
     @include small {
         margin: 1rem auto 0;
-        width: 115px;
+        width: 120px;
         display: block;
     }
 
@@ -39,9 +35,8 @@
     }
 }
 
-.Island-text {
+.Intro-text {
     display: inline-block;
-    font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
 
     @include wide {
@@ -51,7 +46,7 @@
     }
 }
 
-.Island-img {
+.Intro-img {
     margin: 0.5rem auto;
     display: block;
     width: $img-width;

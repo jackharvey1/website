@@ -3,10 +3,6 @@
     border-radius: calc(#{$img-width} / 2);
 }
 
-.Img--rotate {
-    transition: all 0.5s;
-}
-
 .Img--upsideDown {
     transform: rotate(180deg);
 }
