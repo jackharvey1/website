@@ -21,12 +21,10 @@ function bindArrows() {
             const topOfPrevPage = arrow.element.parentElement.offsetTop - arrow.element.offsetHeight;
 
             if (arrow.pressed) {
-                window.scrollTo(0, topOfPrevPage);
+                document.getElementById('cells').style.top = Math.min(-topOfPrevPage, 0);
             } else {
-                window.scrollTo(0, topOfArrow);
+                document.getElementById('cells').style.top = -topOfArrow;
             }
-
-            console.log(topOfArrow);
 
             arrow.icon.toggleClass('Img--upsideDown');
 
