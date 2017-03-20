@@ -1,0 +1,38 @@
+.Dunno {
+    @include wide {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.Dunno-inner {
+    width: 300px;
+    margin: auto;
+
+    @include wide {
+        &:first-child {
+            float: left;
+        }
+
+        &:last-child {
+            margin-left: 1rem;
+        }
+    }
+}
+
+.Dunno-heading {
+    text-align: right;
+    @include keyline;
+}
+
+.Dunno-place {
+    display: inline;
+}
+
+.Dunno-date {
+    color: $light-text-colour;
+}
+
+.Dunno-content {
+    margin-top: 1rem;
+}

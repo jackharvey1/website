@@ -15,3 +15,7 @@
         @content;
     }
 }
+
+@mixin keyline() {
+    border-bottom: 2px solid #A9A9A9;
+}

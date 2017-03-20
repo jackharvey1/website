@@ -16,8 +16,10 @@
 
 .Portfolio-heading {
     @include wide {
-        margin: 10rem 5rem 0 0;
+        margin: 2rem 5rem 0 0;
     }
+
+    @include keyline;
 }
 
 .Portfolio-grid {
@@ -27,8 +29,17 @@
 }
 
 .Portfolio-cell {
-    border-bottom: 1px solid #D0CECE;
-    padding: 1rem;
+    padding-bottom: 1rem;
+
+    @include keyline;
+
+    &:last-child {
+        border: none;
+    }
+
+    @include wide {
+        padding: 1rem;
+    }
 
     & a {
         font-weight: bold;
@@ -36,7 +47,7 @@
 }
 
 .Portfolio-img {
-    margin: 0 -1rem 1rem;
+    margin: 1rem 0;
     width: 300px;
     height: 200px;
 
@@ -47,7 +58,7 @@
 }
 
 .Portfolio-cell-date {
-    color: #8A8A8A;
+    color: $light-text-colour;
 }
 
 .Portfolio-cell-description {
