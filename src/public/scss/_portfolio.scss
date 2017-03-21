@@ -15,6 +15,8 @@
 }
 
 .Portfolio-heading {
+    display: table;
+
     @include wide {
         margin: 2rem 5rem 0 0;
     }
